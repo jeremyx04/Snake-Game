@@ -59,16 +59,16 @@ while game:
         if event.type == pygame.QUIT:
             game = 0
         if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_UP:
+            if event.key == pygame.K_UP and player.direction != 'd':
                 player.direction = 'u'
                 start = 1
-            elif event.key == pygame.K_DOWN:
+            elif event.key == pygame.K_DOWN and player.direction !='u':
                 player.direction = 'd'
                 start = 1
-            elif event.key == pygame.K_LEFT:
+            elif event.key == pygame.K_LEFT and player.direction !='r':
                 player.direction = 'l'
                 start = 1
-            elif event.key == pygame.K_RIGHT:
+            elif event.key == pygame.K_RIGHT and player.direction !='l':
                 player.direction = 'r'
                 start = 1
     if not game:
